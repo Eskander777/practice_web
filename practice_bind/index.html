@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    div {
+      display: flex;
+    }
+    button {
+      margin-right: 1rem;
+    }
+  </style>
+  <body>
+    <div>
+      <button>Button</button>
+      <button>Button</button>
+      <button>Button</button>
+      <button>Button</button>
+    </div>
+  </body>
+  <script>
+    function buttonClicked(bind, passed) {
+      console.log("[bind]", bind);
+      console.log("[passed]", passed);
+    }
+
+    function buttonClickedWrapper(passedFn) {
+      passedFn("Nope");
+    }
+
+    document.querySelector("button").addEventListener(
+      "click",
+      buttonClickedWrapper.bind(null, buttonClicked.bind(null, "here")) // можно использовать bind при передачи функции, например в другую функцию, но нельзя сразу перед вызовом функции
+    );
+  </script>
+</html>
