@@ -1,0 +1,45 @@
+.square {
+  width: 20rem;
+  height: 20rem;
+  background-color: red;
+  position: relative;
+  animation: 2s linear appear;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.round {
+  width: 150%;
+  height: 150%;
+  border-radius: 100%;
+  background-color: royalblue;
+  position: absolute;
+  right: -25%;
+  bottom: -25%;
+  animation: 3s linear 2s infinite alternate unshrink;
+}
+
+@keyframes unshrink {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(0.1);
+  }
+}
+
+.row {
+  display: flex;
+}
