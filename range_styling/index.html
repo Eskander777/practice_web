@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <input
+        type="range"
+        value="70"
+        min="0"
+        max="100"
+        oninput="rangevalue.value=value"
+      />
+      <output id="rangevalue">70</output>
+
+      <br />
+      <br />
+      <br />
+
+      <input
+        type="range"
+        value="70"
+        min="0"
+        max="100"
+        id="range"
+        oninput="rangenumber.value=value"
+      />
+      <input
+        type="number"
+        id="rangenumber"
+        min="0"
+        max="100"
+        value="70"
+        oninput="range.value=value"
+      />
+    </div>
+  </body>
+</html>
