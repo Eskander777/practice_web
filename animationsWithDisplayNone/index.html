@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animations with display: none; and display: block;</title>
+    <style>
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+      }
+
+      html,
+      body {
+        box-sizing: border-box;
+      }
+
+      body {
+        text-align: center;
+      }
+
+      .red-square__wrap {
+        height: 80vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .red-square {
+        display: none;
+        width: 160px;
+        height: 160px;
+        background-color: red;
+        cursor: pointer;
+        transition: opacity 0.3s;
+        animation: roll-in 2s linear 0ms forwards;
+      }
+
+      .red-square:hover {
+        opacity: 0.7;
+      }
+
+      .red-square_active {
+        display: block;
+      }
+
+      @keyframes roll-in {
+        from {
+          transform: scale(0.1) rotate(3turn) translateY(-20vh) skew(0.5rad);
+        }
+
+        to {
+          transform: scale(1) rotate(0) translateY(0) skew(0);
+        }
+      }
+    </style>
+
+    <script defer>
+      document.addEventListener("DOMContentLoaded", function () {
+        const redSquare = document.querySelector(".red-square");
+        const body = document.querySelector("body");
+
+        console.log(redSquare);
+
+        body.addEventListener("click", function () {
+          redSquare.classList.toggle("red-square_active");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h1>Click to see square</h1>
+    <div class="red-square__wrap">
+      <div class="red-square"></div>
+    </div>
+  </body>
+</html>
