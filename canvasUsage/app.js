@@ -18,6 +18,19 @@ if (canvasWithPath.getContext) {
   ctx.lineTo(20, 70);
   ctx.lineTo(150, 70);
   ctx.lineTo(150, 20);
-  ctx.fill();
+  ctx.closePath();
+  ctx.stroke();
+}
+
+const canvasWithRound = document.getElementById("circle");
+
+if (canvasWithRound.getContext) {
+  const ctx = canvasWithRound.getContext("2d");
+
+  ctx.beginPath();
+  // ctx.moveTo(60, 120);
+  ctx.arc(80, 80, 60, 0, Math.PI, true);
+  // ctx.closePath();
+  ctx.stroke();
 }
 
