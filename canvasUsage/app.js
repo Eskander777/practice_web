@@ -34,3 +34,25 @@ if (canvasWithRound.getContext) {
   ctx.stroke();
 }
 
+const berzierCanvas = document.getElementById("berzier");
+
+if (berzierCanvas.getContext) {
+  const ctx = berzierCanvas.getContext("2d");
+
+  ctx.beginPath();
+  ctx.moveTo(75, 50);
+  ctx.quadraticCurveTo(100, 25, 125, 50);
+  ctx.quadraticCurveTo(100, 100, 75, 50);
+  ctx.closePath();
+  ctx.stroke();
+
+  ctx.beginPath();
+  ctx.moveTo(150, 100);
+  ctx.lineTo(150, 70);
+  ctx.quadraticCurveTo(175, 50, 200, 70);
+  ctx.lineTo(200, 100);
+
+  ctx.closePath();
+  ctx.fill();
+}
+
