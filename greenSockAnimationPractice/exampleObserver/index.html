@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        margin: 0;
+        text-align: center;
+      }
+
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      #square {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+      }
+    </style>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"
+      defer
+    ></script>
+    <script src="./app.js" defer></script>
+    <title>GreenSock Animations Observer Example</title>
+  </head>
+  <body>
+    <h1>Move over square</h1>
+    <div class="container">
+      <div id="square"></div>
+    </div>
+  </body>
+</html>
