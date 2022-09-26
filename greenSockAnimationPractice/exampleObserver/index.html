@@ -8,16 +8,25 @@
       body {
         margin: 0;
         text-align: center;
+        height: 100vh;
       }
 
       .container {
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 100vh;
       }
 
       #square {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 800px;
+        width: 800px;
+      }
+
+      #small-square {
+        perspective: 500px;
         width: 200px;
         height: 200px;
         background-color: red;
@@ -33,7 +42,9 @@
   <body>
     <h1>Move over square</h1>
     <div class="container">
-      <div id="square"></div>
+      <div id="square">
+        <div id="small-square"></div>
+      </div>
     </div>
   </body>
 </html>
