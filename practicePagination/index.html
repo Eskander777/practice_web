@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    View in console
+    <script>
+      function paginateWithFor(toPaginate, itemsPerPage) {
+        const paginated = [];
+        const page = [];
+
+        for (let i = 0; i < toPaginate.length; i++) {
+          const itemNum = i + 1;
+          page.push(toPaginate[i]);
+
+          if (itemNum % itemsPerPage === 0 || itemNum === toPaginate.length) {
+            const pageToAdd = [...page];
+
+            paginated.push(pageToAdd);
+            page.length = 0;
+          }
+        }
+        return paginated;
+      }
+
+      function paginateWithSlice(toPaginate, itemsPerPage) {
+        const paginated = [];
+
+        for (let i = 0; i < toPaginate.length; i++) {
+          const itemNum = i + 1;
+
+          if (itemNum === itemsPerPage) {
+            paginated.push(toPaginate.slice(0, itemNum));
+          } else if (itemNum % itemsPerPage === 0) {
+            paginated.push(toPaginate.slice(itemNum - itemsPerPage, itemNum));
+          } else if (itemNum === toPaginate.length) {
+            const itemsLeft = toPaginate.length % itemsPerPage;
+            paginated.push(toPaginate.slice(itemNum - itemsLeft));
+          }
+        }
+
+        return paginated;
+      }
+
+      const arrToPaginate = [1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 8, 9, 11, 13];
+
+      const paginatedArr = paginateWithFor(arrToPaginate, 4);
+      console.log({ paginatedArr });
+
+      const anotherPaginatedArr = paginateWithSlice(arrToPaginate, 4);
+      console.log({ anotherPaginatedArr });
+    </script>
+  </body>
+</html>
