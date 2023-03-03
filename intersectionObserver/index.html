@@ -65,7 +65,7 @@
               newItem.textContent = newVal;
               newItem.className = "item item_visible";
               // выводим информацию в консоль - проверка работоспособности наблюдателя
-              console.log(entry);
+              // console.log(entry);
               // меняем фон контейнера
               liItem.classList.add("item_visible");
               items.appendChild(newItem);
@@ -78,6 +78,15 @@
         }, options);
 
         const arr = document.querySelectorAll(".item");
+
+        function test(index) {
+          console.log(index);
+        }
+
+        arr.forEach((item, i) => {
+          item.addEventListener("mouseover", test.bind(null, i));
+        });
+
         arr.forEach((item) => {
           observer.observe(item);
         });
@@ -111,3 +120,4 @@
     </div>
   </body>
 </html>
+

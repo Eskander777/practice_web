@@ -27,7 +27,7 @@ timeline
     "<"
   );
 
-const button = document.querySelector(".button");
+// const button = document.querySelector(".button");
 
 button.addEventListener("click", () => {
   timeline.timeScale(3);
