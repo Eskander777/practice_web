@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Progress with scrollbar</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: sans-serif;
+      }
+
+      .progress-container {
+        padding: 2rem;
+      }
+
+      #progress-bar {
+        height: 2rem;
+        background-color: violet;
+        width: 0%;
+        border-radius: 9999px;
+      }
+      progress {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4rem;
+        background-color: green;
+        z-index: 1;
+      }
+      .progress-container {
+        position: fixed;
+        z-index: 1;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background-color: aliceblue;
+        transition: transform 0.2s linear;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="progress-container">
+        <div id="progress-bar"></div>
+      </div>
+      <!-- <progress value></progress> -->
+
+      <article class="scrollable-text">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, soluta
+          voluptatibus. Debitis vero saepe iste consequuntur reprehenderit quam
+          rem, sapiente quisquam, autem aperiam consectetur. Maxime ullam
+          exercitationem facilis id laboriosam sapiente ab vitae suscipit est
+          soluta, expedita fuga dolore deserunt aperiam nam delectus fugiat
+          provident voluptatem quia cupiditate molestias. Exercitationem sit,
+          ipsam sunt possimus quod dolor repellat deleniti. Aliquid rem rerum
+          itaque, totam aliquam consequuntur laudantium reiciendis iste harum
+          tempora tenetur reprehenderit aspernatur, provident exercitationem eos
+          omnis voluptatem molestiae perspiciatis! Cupiditate repellendus
+          delectus non quas maiores dolores eos rerum, dicta sunt fuga ullam
+          fugit doloribus aspernatur ipsam est officia laudantium.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, soluta
+          voluptatibus. Debitis vero saepe iste consequuntur reprehenderit quam
+          rem, sapiente quisquam, autem aperiam consectetur. Maxime ullam
+          exercitationem facilis id laboriosam sapiente ab vitae suscipit est
+          soluta, expedita fuga dolore deserunt aperiam nam delectus fugiat
+          provident voluptatem quia cupiditate molestias. Exercitationem sit,
+          ipsam sunt possimus quod dolor repellat deleniti. Aliquid rem rerum
+          itaque, totam aliquam consequuntur laudantium reiciendis iste harum
+          tempora tenetur reprehenderit aspernatur, provident exercitationem eos
+          omnis voluptatem molestiae perspiciatis! Cupiditate repellendus
+          delectus non quas maiores dolores eos rerum, dicta sunt fuga ullam
+          fugit doloribus aspernatur ipsam est officia laudantium.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, soluta
+          voluptatibus. Debitis vero saepe iste consequuntur reprehenderit quam
+          rem, sapiente quisquam, autem aperiam consectetur. Maxime ullam
+          exercitationem facilis id laboriosam sapiente ab vitae suscipit est
+          soluta, expedita fuga dolore deserunt aperiam nam delectus fugiat
+          provident voluptatem quia cupiditate molestias. Exercitationem sit,
+          ipsam sunt possimus quod dolor repellat deleniti. Aliquid rem rerum
+          itaque, totam aliquam consequuntur laudantium reiciendis iste harum
+          tempora tenetur reprehenderit aspernatur, provident exercitationem eos
+          omnis voluptatem molestiae perspiciatis! Cupiditate repellendus
+          delectus non quas maiores dolores eos rerum, dicta sunt fuga ullam
+          fugit doloribus aspernatur ipsam est officia laudantium.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, soluta
+          voluptatibus. Debitis vero saepe iste consequuntur reprehenderit quam
+          rem, sapiente quisquam, autem aperiam consectetur. Maxime ullam
+          exercitationem facilis id laboriosam sapiente ab vitae suscipit est
+          soluta, expedita fuga dolore deserunt aperiam nam delectus fugiat
+          provident voluptatem quia cupiditate molestias. Exercitationem sit,
+          ipsam sunt possimus quod dolor repellat deleniti. Aliquid rem rerum
+          itaque, totam aliquam consequuntur laudantium reiciendis iste harum
+          tempora tenetur reprehenderit aspernatur, provident exercitationem eos
+          omnis voluptatem molestiae perspiciatis! Cupiditate repellendus
+          delectus non quas maiores dolores eos rerum, dicta sunt fuga ullam
+          fugit doloribus aspernatur ipsam est officia laudantium.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, soluta
+          voluptatibus. Debitis vero saepe iste consequuntur reprehenderit quam
+          rem, sapiente quisquam, autem aperiam consectetur. Maxime ullam
+          exercitationem facilis id laboriosam sapiente ab vitae suscipit est
+          soluta, expedita fuga dolore deserunt aperiam nam delectus fugiat
+          provident voluptatem quia cupiditate molestias. Exercitationem sit,
+          ipsam sunt possimus quod dolor repellat deleniti. Aliquid rem rerum
+          itaque, totam aliquam consequuntur laudantium reiciendis iste harum
+          tempora tenetur reprehenderit aspernatur, provident exercitationem eos
+          omnis voluptatem molestiae perspiciatis! Cupiditate repellendus
+          delectus non quas maiores dolores eos rerum, dicta sunt fuga ullam
+          fugit doloribus aspernatur ipsam est officia laudantium.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, soluta
+          voluptatibus. Debitis vero saepe iste consequuntur reprehenderit quam
+          rem, sapiente quisquam, autem aperiam consectetur. Maxime ullam
+          exercitationem facilis id laboriosam sapiente ab vitae suscipit est
+          soluta, expedita fuga dolore deserunt aperiam nam delectus fugiat
+          provident voluptatem quia cupiditate molestias. Exercitationem sit,
+          ipsam sunt possimus quod dolor repellat deleniti. Aliquid rem rerum
+          itaque, totam aliquam consequuntur laudantium reiciendis iste harum
+          tempora tenetur reprehenderit aspernatur, provident exercitationem eos
+          omnis voluptatem molestiae perspiciatis! Cupiditate repellendus
+          delectus non quas maiores dolores eos rerum, dicta sunt fuga ullam
+          fugit doloribus aspernatur ipsam est officia laudantium.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, soluta
+          voluptatibus. Debitis vero saepe iste consequuntur reprehenderit quam
+          rem, sapiente quisquam, autem aperiam consectetur. Maxime ullam
+          exercitationem facilis id laboriosam sapiente ab vitae suscipit est
+          soluta, expedita fuga dolore deserunt aperiam nam delectus fugiat
+          provident voluptatem quia cupiditate molestias. Exercitationem sit,
+          ipsam sunt possimus quod dolor repellat deleniti. Aliquid rem rerum
+          itaque, totam aliquam consequuntur laudantium reiciendis iste harum
+          tempora tenetur reprehenderit aspernatur, provident exercitationem eos
+          omnis voluptatem molestiae perspiciatis! Cupiditate repellendus
+          delectus non quas maiores dolores eos rerum, dicta sunt fuga ullam
+          fugit doloribus aspernatur ipsam est officia laudantium.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, soluta
+          voluptatibus. Debitis vero saepe iste consequuntur reprehenderit quam
+          rem, sapiente quisquam, autem aperiam consectetur. Maxime ullam
+          exercitationem facilis id laboriosam sapiente ab vitae suscipit est
+          soluta, expedita fuga dolore deserunt aperiam nam delectus fugiat
+          provident voluptatem quia cupiditate molestias. Exercitationem sit,
+          ipsam sunt possimus quod dolor repellat deleniti. Aliquid rem rerum
+          itaque, totam aliquam consequuntur laudantium reiciendis iste harum
+          tempora tenetur reprehenderit aspernatur, provident exercitationem eos
+          omnis voluptatem molestiae perspiciatis! Cupiditate repellendus
+          delectus non quas maiores dolores eos rerum, dicta sunt fuga ullam
+          fugit doloribus aspernatur ipsam est officia laudantium.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, soluta
+          voluptatibus. Debitis vero saepe iste consequuntur reprehenderit quam
+          rem, sapiente quisquam, autem aperiam consectetur. Maxime ullam
+          exercitationem facilis id laboriosam sapiente ab vitae suscipit est
+          soluta, expedita fuga dolore deserunt aperiam nam delectus fugiat
+          provident voluptatem quia cupiditate molestias. Exercitationem sit,
+          ipsam sunt possimus quod dolor repellat deleniti. Aliquid rem rerum
+          itaque, totam aliquam consequuntur laudantium reiciendis iste harum
+          tempora tenetur reprehenderit aspernatur, provident exercitationem eos
+          omnis voluptatem molestiae perspiciatis! Cupiditate repellendus
+          delectus non quas maiores dolores eos rerum, dicta sunt fuga ullam
+          fugit doloribus aspernatur ipsam est officia laudantium.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, soluta
+          voluptatibus. Debitis vero saepe iste consequuntur reprehenderit quam
+          rem, sapiente quisquam, autem aperiam consectetur. Maxime ullam
+          exercitationem facilis id laboriosam sapiente ab vitae suscipit est
+          soluta, expedita fuga dolore deserunt aperiam nam delectus fugiat
+          provident voluptatem quia cupiditate molestias. Exercitationem sit,
+          ipsam sunt possimus quod dolor repellat deleniti. Aliquid rem rerum
+          itaque, totam aliquam consequuntur laudantium reiciendis iste harum
+          tempora tenetur reprehenderit aspernatur, provident exercitationem eos
+          omnis voluptatem molestiae perspiciatis! Cupiditate repellendus
+          delectus non quas maiores dolores eos rerum, dicta sunt fuga ullam
+          fugit doloribus aspernatur ipsam est officia laudantium.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, soluta
+          voluptatibus. Debitis vero saepe iste consequuntur reprehenderit quam
+          rem, sapiente quisquam, autem aperiam consectetur. Maxime ullam
+          exercitationem facilis id laboriosam sapiente ab vitae suscipit est
+          soluta, expedita fuga dolore deserunt aperiam nam delectus fugiat
+          provident voluptatem quia cupiditate molestias. Exercitationem sit,
+          ipsam sunt possimus quod dolor repellat deleniti. Aliquid rem rerum
+          itaque, totam aliquam consequuntur laudantium reiciendis iste harum
+          tempora tenetur reprehenderit aspernatur, provident exercitationem eos
+          omnis voluptatem molestiae perspiciatis! Cupiditate repellendus
+          delectus non quas maiores dolores eos rerum, dicta sunt fuga ullam
+          fugit doloribus aspernatur ipsam est officia laudantium.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, soluta
+          voluptatibus. Debitis vero saepe iste consequuntur reprehenderit quam
+          rem, sapiente quisquam, autem aperiam consectetur. Maxime ullam
+          exercitationem facilis id laboriosam sapiente ab vitae suscipit est
+          soluta, expedita fuga dolore deserunt aperiam nam delectus fugiat
+          provident voluptatem quia cupiditate molestias. Exercitationem sit,
+          ipsam sunt possimus quod dolor repellat deleniti. Aliquid rem rerum
+          itaque, totam aliquam consequuntur laudantium reiciendis iste harum
+          tempora tenetur reprehenderit aspernatur, provident exercitationem eos
+          omnis voluptatem molestiae perspiciatis! Cupiditate repellendus
+          delectus non quas maiores dolores eos rerum, dicta sunt fuga ullam
+          fugit doloribus aspernatur ipsam est officia laudantium.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, soluta
+          voluptatibus. Debitis vero saepe iste consequuntur reprehenderit quam
+          rem, sapiente quisquam, autem aperiam consectetur. Maxime ullam
+          exercitationem facilis id laboriosam sapiente ab vitae suscipit est
+          soluta, expedita fuga dolore deserunt aperiam nam delectus fugiat
+          provident voluptatem quia cupiditate molestias. Exercitationem sit,
+          ipsam sunt possimus quod dolor repellat deleniti. Aliquid rem rerum
+          itaque, totam aliquam consequuntur laudantium reiciendis iste harum
+          tempora tenetur reprehenderit aspernatur, provident exercitationem eos
+          omnis voluptatem molestiae perspiciatis! Cupiditate repellendus
+          delectus non quas maiores dolores eos rerum, dicta sunt fuga ullam
+          fugit doloribus aspernatur ipsam est officia laudantium.
+        </p>
+      </article>
+    </main>
+    <script>
+      const scrollableText = document.querySelector(".scrollable-text");
+      const progressBar = document.getElementById("progress-bar");
+      const progress = document.querySelector("progress");
+
+      function scrollHandler() {
+        // Get scrolled top pixel value
+        const windowScroll =
+          document.body.scrollTop || document.documentElement.scrollTop;
+        // Get value of pixels outside of client's viewport
+        const offsetHeight =
+          document.documentElement.scrollHeight -
+          document.documentElement.clientHeight;
+        // Get scrolled value in percents
+        const scrolled = (windowScroll / offsetHeight) * 100;
+        // progress.value = scrolled;
+
+        if (windowScroll === 0) {
+          this.parentElement.style.transform = "translateY(-100%)";
+        } else {
+          this.parentElement.style.transform = "translateY(0)";
+        }
+
+        this.style.width = scrolled + "%";
+
+        // console.log({ windowScroll });
+        // console.log({ offsetHeight });
+        // console.log({ scrolled });
+      }
+
+      window.addEventListener("scroll", scrollHandler.bind(progressBar));
+
+      // work with call() method
+
+      console.log("Call");
+
+      let worker = {
+        someMethod() {
+          return 1;
+        },
+
+        slow(x) {
+          console.log("Called with " + x);
+          return x * this.someMethod(); // (*)
+        },
+      };
+
+      function cachingDecorator(func) {
+        let cache = new Map();
+        return function (x) {
+          if (cache.has(x)) {
+            return cache.get(x);
+          }
+          let result = func.call(this, x); // (**)
+          cache.set(x, result);
+          return result;
+        };
+      }
+
+      console.log(worker.slow(1)); // original method work
+
+      // Because "cachingDecorator" returns a function, "this" for returned function is "worker",
+      // because it replaces original "slow" method in worker object, where worker is "this"
+      // And for "cachingDecorator" itself "this" is window object because it is called on it
+      worker.slow = cachingDecorator(worker.slow);
+
+      console.log(worker.slow(2));
+
+      // work with apply() method
+
+      console.log("Apply");
+
+      let workerApply = {
+        slow(min, max) {
+          console.log(`Called with ${min},${max}`);
+          return min + max;
+        },
+      };
+
+      function cachingDecoratorApply(func, hash) {
+        let cache = new Map();
+        return function (...args) {
+          let key = hash(args);
+          if (cache.has(key)) {
+            return cache.get(key);
+          }
+          // apply() method works as call(), but as second argument always use array or
+          // array-like enitities
+          let result = func.apply(this, args);
+
+          cache.set(key, result);
+          return result;
+        };
+      }
+
+      function hash(args) {
+        return args[0] + "," + args[1];
+      }
+
+      workerApply.slow = cachingDecoratorApply(workerApply.slow, hash);
+
+      console.log(workerApply.slow(3, 5));
+      console.log("Again " + workerApply.slow(3, 5));
+    </script>
+  </body>
+</html>
+
