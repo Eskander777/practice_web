@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @layer first {
+        .text {
+          background-color: red;
+          color: black;
+        }
+      }
+
+      @layer third {
+        main > .text {
+          background-color: blue;
+          color: white;
+        }
+      }
+
+      @layer second {
+        .text {
+          background-color: green;
+          color: red;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid,
+        debitis deserunt obcaecati voluptas sunt quas esse excepturi iste ad
+        quam?
+      </div>
+    </main>
+  </body>
+</html>
+
