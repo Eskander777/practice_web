@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clear Timeout</title>
+  </head>
+  <body>
+    <button>Наведи на меня</button>
+    <div hidden>Подсказка к кнопке</div>
+    <script>
+      const trigger = document.querySelector("button");
+      const hint = document.querySelector("div");
+
+      let hideTimeoutId = null; // to make timeout id visible inside function of 'mouseleave'
+
+      trigger.addEventListener("mouseenter", function () {
+        hint.hidden = false;
+        clearTimeout(hideTimeoutId); // clear timeout if there is existing
+      });
+
+      trigger.addEventListener("mouseleave", function () {
+        hideTimeoutId = setTimeout(function () {
+          hint.hidden = true;
+        }, 10000); // timeout that works after 1000 ms
+      });
+    </script>
+  </body>
+</html>
+
